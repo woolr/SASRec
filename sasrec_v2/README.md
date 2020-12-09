@@ -1,4 +1,8 @@
-# SASRec: Self-Attentive Sequential Recommendation
+# Python3 + TF2 Updated SASRec
+
+I've updated the code to python3 and tf2
+
+## Original Readme: SASRec: Self-Attentive Sequential Recommendation
 
 This is our TensorFlow implementation for the paper:
 
@@ -10,14 +14,14 @@ The code is tested under a Linux desktop (w/ GTX 1080 Ti GPU) with TensorFlow 1.
 
 Refer to *[here](https://github.com/pmixer/SASRec.pytorch)* for PyTorch implementation (thanks to pmixer).
 
-## Datasets
+### Datasets
 
 The preprocessed datasets are included in the repo (`e.g. data/Video.txt`), where each line contains an `user id` and 
 `item id` (starting from 1) meaning an interaction (sorted by timestamp).
 
 The data pre-processing script is also included. For example, you could download Amazon review data from *[here.](http://jmcauley.ucsd.edu/data/amazon/index.html)*, and run the script to produce the `txt` format data.
 
-### Steam Dataset
+#### Steam Dataset
 
 We crawled reviews and game information from Steam. The dataset contains 7,793,069 reviews, 2,567,538 users, and 32,135 games. In addition to the review text, the data also includes the users' play hours in each review.     
 
@@ -44,7 +48,7 @@ We crawled reviews and game information from Steam. The dataset contains 7,793,0
 ```
   
 
-## Model Training
+### Model Training
 
 To train our model on `Video` (with default hyper-parameters): 
 
@@ -58,7 +62,7 @@ or on `ml-1m`:
 python main.py --dataset=ml-1m --train_dir=default --maxlen=200 --dropout_rate=0.2 
 ``` 
 
-## Misc
+### Misc
 
 The implemention of self attention is modified based on *[this](https://github.com/Kyubyong/transformer)*
 
