@@ -1,4 +1,8 @@
-# SASRec: Self-Attentive Sequential Recommendation
+# Python3 + TF2 Updated SASRec
+
+I've updated the code to python3 and tf2
+
+# Original Readme: SASRec: Self-Attentive Sequential Recommendation
 
 This is our TensorFlow implementation for the paper:
 
