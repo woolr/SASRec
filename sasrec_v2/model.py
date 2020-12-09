@@ -40,9 +40,8 @@ class Model():
             self.seq += t
 
             # Dropout
-            self.seq = tf.compat.v1.layers.dropout(self.seq,
-                                         rate=args.dropout_rate,
-                                         training=tf.convert_to_tensor(value=self.is_training))
+            dropout_layer = tf.keras.layers.Dropout(rate=args.dropout_rate)
+            self.seq = dropout_layer(self.seq, training=tf.convert_to_tensor(value=self.is_training))
             self.seq *= mask
 
             # Build blocks
