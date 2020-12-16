@@ -64,7 +64,7 @@ print("Starting!....")
 
 for epoch in range(1, args.num_epochs + 1):
 
-    for step in tqdm(list(range(int(num_batch))), total=int(num_batch), ncols=70, leave=False, unit='b'):
+    for step in tqdm(list(range(int(num_batch))), total=int(num_batch), ncols=40, leave=False, unit='b'):
         u, seq, pos, neg = sampler.next_batch()
         auc, loss, _ = sess.run([model.auc, model.loss, model.train_op],
                                 {model.u: u, model.input_seq: seq, model.pos: pos, model.neg: neg,
